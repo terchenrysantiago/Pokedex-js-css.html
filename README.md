@@ -8,6 +8,7 @@ apenas as informações necessarias para criação dos cards.
 # Project Images
 
 <h3> Página principal <h3>
+  
 ![pokegif](https://user-images.githubusercontent.com/70164638/115275150-d5e7f380-a117-11eb-9f89-27f64ba413d0.gif)
   
   <h3>Responsive <h3>
