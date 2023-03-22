@@ -7,11 +7,7 @@ pool:
 variables:
 - name: IMAGEMM
   value: "emersonhnt/wpp2-delivery:dev-build-123"
-resources:
-  repositories:
-  - repository: DevOps_CI
-    type: git
-    name: "DevOps HNT/DevOps_CI"
+
 
 steps:
 - checkout: DevOps_CI
