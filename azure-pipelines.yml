@@ -13,7 +13,6 @@ resources:
 steps:
 - checkout: DevOps_CI
 - script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
-- script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
 
 - ${{ if eq(variables['Build.SourceBranchName'], 'development')  }}:
   - script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
@@ -21,3 +20,4 @@ steps:
   - script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
 
 - script: ls $(System.DefaultWorkingDirectory)
+- script: cat wpp2delivery.yaml
