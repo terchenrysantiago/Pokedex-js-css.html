@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- name: IMAGEMM
+  value: "emersonhnt/wpp2-delivery:dev-build-12312"
 resources:
   repositories:
   - repository: DevOps_CI
@@ -20,4 +23,6 @@ steps:
   - script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
 
 - script: ls $(System.DefaultWorkingDirectory)
+- script: cat wpp2delivery.yaml
+- script: sed -i "s/$IMAGE_GENERATED/$(IMAGEMM)/g" wpp2delivery.yaml
 - script: cat wpp2delivery.yaml
