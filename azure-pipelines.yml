@@ -13,4 +13,10 @@ resources:
 steps:
 - checkout: DevOps_CI
 - script: ls $(System.DefaultWorkingDirectory)
-- script: cat Wpp2Manifests/development/wpp2delivery.yaml
+- script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
+- script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
+
+- ${{ if eq(variables['Build.SourceBranchName'], 'development')  }}:
+  - script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
+- ${{ elseif eq(variables['Build.SourceBranchName'], 'release/qa_uat') }}:
+  - script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
