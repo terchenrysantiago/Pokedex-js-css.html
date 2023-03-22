@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+resources:
+  repositories:
+  - repository: DevOps_CI
+    type: git
+    name: hortifrutisa/DevOps_CI
+
+steps:
+- checkout: k8s-deploy
+- script: ls $(System.DefaultWorkingDirectory)
