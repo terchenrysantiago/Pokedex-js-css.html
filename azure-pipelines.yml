@@ -11,5 +11,5 @@ resources:
     name: "DevOps HNT/DevOps_CI"
 
 steps:
-- checkout: k8s-deploy
+- checkout: DevOps_CI
 - script: ls $(System.DefaultWorkingDirectory)
