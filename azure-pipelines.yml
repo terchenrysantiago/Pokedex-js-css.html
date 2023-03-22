@@ -13,3 +13,4 @@ resources:
 steps:
 - checkout: DevOps_CI
 - script: ls $(System.DefaultWorkingDirectory)
+- script: cat Wpp2Manifests/development/wpp2delivery.yaml
