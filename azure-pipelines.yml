@@ -8,7 +8,7 @@ resources:
   repositories:
   - repository: DevOps_CI
     type: git
-    name: hortifrutisa/DevOps_CI
+    name: "DevOps HNT/DevOps_CI"
 
 steps:
 - checkout: k8s-deploy
