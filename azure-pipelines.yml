@@ -6,7 +6,7 @@ pool:
 
 variables:
 - name: IMAGEMM
-  value: "CARLOS"
+  value: "emersonhnt/wpp2-delivery:dev-build-123"
 resources:
   repositories:
   - repository: DevOps_CI
