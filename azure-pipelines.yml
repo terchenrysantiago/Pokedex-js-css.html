@@ -10,7 +10,7 @@ variables:
 
 
 steps:
-- checkout: DevOps_CI
+
 - script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
 
 - ${{ if eq(variables['Build.SourceBranchName'], 'development')  }}:
