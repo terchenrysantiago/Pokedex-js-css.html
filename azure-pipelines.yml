@@ -4,21 +4,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-- name: IMAGEMM
-  value: "emersonhnt/wpp2-delivery:dev-build-123"
 
 
 steps:
 
-- script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
-
-- ${{ if eq(variables['Build.SourceBranchName'], 'development')  }}:
-  - script: cp Wpp2Manifests/development/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
-- ${{ elseif eq(variables['Build.SourceBranchName'], 'release/qa_uat') }}:
-  - script: cp Wpp2Manifests/homologacao/wpp2delivery.yaml $(System.DefaultWorkingDirectory)
-
-- script: ls $(System.DefaultWorkingDirectory)
-- script: cat wpp2delivery.yaml
-- script: sed -i "s!{{GENIMAGE}}!$(IMAGEMM)!g" wpp2delivery.yaml
-- script: cat wpp2delivery.yaml
