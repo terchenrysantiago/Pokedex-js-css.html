@@ -4,8 +4,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
+variables:
+- name: env
+  value: development
 
 steps:
 
-- script: echo [$Build.DefinitionName]($(env)-$(Build.BuildId)) ($(Build.SourceBranchName)) is being deployed by $Build.RequestedFor
+- script: echo "[$Build.DefinitionName]($env-$Build.BuildId) ($Build.SourceBranchName) is being deployed by $Build.RequestedFor"
