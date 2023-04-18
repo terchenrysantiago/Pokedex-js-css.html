@@ -7,4 +7,4 @@ pool:
 
 
 steps:
-
+  script: echo [$Build.DefinitionName]($(env)-$(Build.BuildId)) ($(Build.SourceBranchName)) is being deployed by $Build.RequestedFor
