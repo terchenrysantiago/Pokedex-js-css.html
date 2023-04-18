@@ -10,4 +10,4 @@ variables:
 
 steps:
 
-- script: echo "[$(Build.DefinitionName)]($(env)-$(Build.BuildId))($(Build.SourceBranchName)) is being deployed by $(Build.RequestedFor)"
+- script: echo "[$(Build.DefinitionName)]($(env)-$(Build.BuildId))($(Build.SourceBranchName)) is being deployed by $(Build.QueuedBy)"
